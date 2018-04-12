@@ -5,7 +5,12 @@
     <title>{% block title %} Ежедневник {% endblock %} </title>
 </head>
 <body>
-{% block navigation %}{% endblock %}
+{% block navigation %}
+<nav>
+    <a href= '{% url "active" %}'> Текущие задания </a>
+    <a href= '{% url "done" %}'> Выполненные задания </a>
+</nav>
+{% endblock %}
 {% block content %}{% endblock %}
 </body>
 </html>

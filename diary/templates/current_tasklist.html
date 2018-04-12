@@ -7,10 +7,14 @@
 </head>
 <body>
 {% block content %}
-{% for entry in tasklist %}
-<p>Задача: <br> {{ entry.task }}</p>
-<p>Описание: <br> {{ entry.description }} </p>
-<p>Создано: <br>{{ entry.create_date }}</p>
+<form action="" method="post">
+    {% for entry in tasklist %}
+    {% csrf_token %}
+    <p>Задача: <br> {{ entry.task }}</p>
+    <p>Описание: <br> {{ entry.description }} </p>
+    <p>Создано: <br>{{ entry.create_date }}</p>
+    <input type="submit" name="{{entry.id}}" value="Выполнить" onclick="window.location.reload()">
+</form>
 {% endfor %}
 {% endblock %}
 </body>
