@@ -5,7 +5,6 @@ def current_tasklist(request):
     context = {}
     diary_objects = Diary.objects.filter(done=False)
     context['tasklist'] = diary_objects
-    print(context['tasklist'])
     template = 'current_tasklist.html'
     return render(request, template, context)
 

@@ -1,17 +1,10 @@
-{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} Diary {% endblock %}</title>
+    <title></title>
 </head>
 <body>
-{% block content %}
-{% for entry in tasklist %}
-<p>Задача: <br> {{ entry.task }}</p>
-<p>Описание: <br> {{ entry.description }} </p>
-<p>Создано: <br>{{ entry.create_date }}</p>
-{% endfor %}
-{% endblock %}
+
 </body>
 </html>
